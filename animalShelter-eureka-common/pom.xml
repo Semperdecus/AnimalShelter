@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.animalShelter.eureka</groupId>
-    <artifactId>animalShelter-eureka-zuul</artifactId>
+    <artifactId>animalShelter-eureka-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>animalShelter-eureka-zuul</name>
-    <description>Microservice project</description>
+    <name>animalShelter-eureka-common</name>
+    <description>common files used inside microservice architecture</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -25,27 +25,14 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.animalShelter.eureka</groupId>
-            <artifactId>animalShelter-eureka-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

@@ -47,6 +47,7 @@ public class DogGalleryController {
         gallery.setId(id);
 
         // get list of available images 
+        @SuppressWarnings("unchecked") // throw an exception from image service to simulate a failure
         List<Object> dogs = restTemplate.getForObject("http://dog-service/dogs/", List.class);
         gallery.setImages(dogs);
 
