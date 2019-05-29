@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+h1, h2, h3, h4, h5 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-shadow: 2px 2px 2px #FFFFFF;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  background: #ddf1fa;
+}
+
+a {
+  text-decoration: none !important;
+  color: black;
+}

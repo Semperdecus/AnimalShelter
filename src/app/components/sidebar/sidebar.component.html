@@ -1,0 +1,18 @@
+<div class="sidebar-header">
+  <h2><a (click)="_toggleSidebar()">Animal Shelter</a></h2>
+  <ng-sidebar-container class="sidebar-container">
+    <!-- A sidebar -->
+    <ng-sidebar class="sidebar" [(opened)]="opened">
+      <div *ngIf="loggedIn; else loggedOut">
+        <a (click)="logOut()">Welcome back, friend.</a>
+      </div>
+      <ng-template #loggedOut>
+        <a routerLink="/login">Please friend, login.</a>
+      </ng-template>
+    </ng-sidebar>
+
+  </ng-sidebar-container>
+
+</div>
+
+<div class="sidebar-backdrop"></div>
