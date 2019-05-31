@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../../_services';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../services';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import '../../../assets/login.js';
 
@@ -10,7 +10,9 @@ import '../../../assets/login.js';
 })
 export class LoginComponent implements OnInit {
   private loggedIn = false;
+  private offline = false;
   loginForm: FormGroup;
+
   constructor(private fb: FormBuilder,
               private authService: AuthService) {
     this.loginForm = this.fb.group({
@@ -19,14 +21,26 @@ export class LoginComponent implements OnInit {
       username: ['', Validators.required]
     });
   }
+
   ngOnInit() {
     (window as any).initialize();
+    this.ping();
     this.loggedIn = AuthService.isLoggedIn();
-    console.log(this.loggedIn);
+  }
+
+  ping() {
+    this.authService.ping().subscribe(
+      () => {}, (err) => {
+        if (err.status === 401) {
+          this.offline = false;
+        } else {
+          this.offline = true;
+        }
+      }
+    );
   }
 
   login() {
-    console.log('logging');
     const val = this.loginForm.value;
     if (val.username && val.password) {
       this.authService.login(val.username, val.password);

@@ -1,0 +1,11 @@
+<app-sidebar></app-sidebar>
+<a routerLink="/dashboard">❌</a>
+<div class="container">
+  <div class="text-center margin-top">
+    <h1>Adopt fresh non-neutered puppers</h1>
+    <div *ngIf="offline"><p class="error">🛑 It appears this service is offline. Try again later! 🛑</p></div>
+
+  </div>
+  <app-dog [dogResults]="dogs"></app-dog>
+</div>
+

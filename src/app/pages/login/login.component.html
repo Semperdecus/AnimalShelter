@@ -1,5 +1,6 @@
-
 <form [formGroup]="loginForm">
+  <div *ngIf="offline"><p class="error text-center">🛑 Auth offline but the <b>monkey works</b> 🛑 <p class="small text-center">(unless you're using internet explorer)</p> </div>
+
   <div class="svgContainer">
     <div>
       <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -163,7 +164,6 @@
     <button id="login" (click)="login()">Login</button>
   </div>
 </form>
-
 
 <div class="abort">
   <a routerLink="/dashboard">The monkey saw my password. 🙈</a>

@@ -8,9 +8,13 @@ import {DashboardComponent} from './pages/dashboard/dashboard.component';
 import {SidebarModule} from 'ng-sidebar';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AuthService} from './_services';
+import {AuthService, DogGalleryService, DogHotelService} from './services';
 import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './pages/login/login.component';
+import {LoginComponent} from './pages/login/login.component';
+import {DogsComponent} from './pages/dogs/dogs.component';
+import {DogComponent} from './components/dog/dog.component';
+import { DoghotelComponent } from './pages/doghotel/doghotel.component';
+import { CatsComponent } from './pages/cats/cats.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { LoginComponent } from './pages/login/login.component';
     SidebarComponent,
     DashboardComponent,
     LoginComponent,
+    DogsComponent,
+    DogComponent,
+    DoghotelComponent,
+    CatsComponent,
   ],
   imports: [
     NgbModule,
@@ -29,7 +37,11 @@ import { LoginComponent } from './pages/login/login.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    DogGalleryService,
+    DogHotelService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
