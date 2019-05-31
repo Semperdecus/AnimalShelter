@@ -1,0 +1,29 @@
+.sidebar-header{
+  position: absolute;
+  top: 0;
+  margin: 30px 20px 20px 5px;
+  z-index: 5;
+  transform: rotate(-30deg);
+}
+.sidebar{
+  margin: 0;
+  top: 0;
+  z-index: 5;
+}
+.sidebar-container{
+  height: 25px;
+  max-width: 200px;
+  margin-left: 0px;
+}
+.sidebar-backdrop{
+  z-index: 1;
+  overflow: hidden;
+  transform: rotate(60deg);
+  width: 100px;
+  height: 400px;
+  background: white;
+  top: -145px;
+  left: 50px;
+  position: absolute;
+  border: 2px solid #217093;
+}

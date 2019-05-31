@@ -1,0 +1,15 @@
+<div class="row justify-content-center">
+  <div *ngFor="let dog of dogResults">
+    <div class="col-sm-4" card>
+      <a>
+        <figure [style.background-image]="'url(' + dog.url + ')'">
+          <div class="date"><span class="card-date-day">05</span><span class="card-date-month">JUNE</span></div>
+          <figcaption>
+            <h4><span>{{dog.name}}</span></h4>
+            <p>{{dog.description}}</p>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+</div>
