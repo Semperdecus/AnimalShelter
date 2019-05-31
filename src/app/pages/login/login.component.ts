@@ -9,7 +9,6 @@ import '../../../assets/login.js';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  private loggedIn = false;
   private offline = false;
   loginForm: FormGroup;
 
@@ -25,17 +24,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     (window as any).initialize();
     this.ping();
-    this.loggedIn = AuthService.isLoggedIn();
+    AuthService.logout();
   }
 
   ping() {
     this.authService.ping().subscribe(
-      () => {}, (err) => {
-        if (err.status === 401) {
-          this.offline = false;
-        } else {
-          this.offline = true;
-        }
+      () => {
+      }, (err) => {
+        this.offline = err.status !== 401;
       }
     );
   }

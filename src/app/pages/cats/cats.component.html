@@ -1,6 +1,76 @@
-<div class="container">
-  <h2>Cat pictures</h2>
-  <h4 class="error"><br>Danger zone</h4>
-  <a>💣 Delete this service? 💣</a>
+<a routerLink="/dashboard">❌</a>
+<div *ngIf="offline; else online" class="wrapper">
+  <h1 class="text-center text-white">This service is offline!</h1>
+  <div class='rainbow'>
+    <span></span>
+  </div>
+  <div class='nyan-cat'>
+    <div class='feet'></div>
+    <div class='tail'>
+      <span></span>
+    </div>
+    <div class='body'></div>
+    <div class='head'></div>
+  </div>
+  <div class='stars'>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+    <div class='star'>
+      <span></span>
+    </div>
+  </div>
 </div>
+
+<ng-template #online>
+  <div class="container">
+    <h1>Cat pictures</h1>
+    <p>Thanks to our partners over at <a href="https://cataas.com">https://cataas.com</a> we can now generate random cat
+      pictures!</p>
+
+    <a class="pointer" (click)="getRandomCat()">
+      <img class="image" [src]="randomCat" alt="Random nyan">
+    </a>
+    <ng-template #authorized>
+      <h4 class="error"><br>Exploding kittens 💣 </h4>
+      <a class="btn btn-warning pointer" (click)="toggleRandomCatService()">Allow random cat service? {{enabled}}</a>
+    </ng-template>
+    <div *ngIf="unauthorized; else authorized"><br>
+      <p class="alert-warning">
+        The kittens used a defuse card
+        <br>You are unauthorized or the service is unavailable
+      </p>
+    </div>
+  </div>
+</ng-template>
 <app-sidebar></app-sidebar>

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Dog} from '../../models/dog';
-import {DogGalleryService, DogHotelService} from '../../services';
+import {Component, OnInit} from '@angular/core';
+import {DogHotelService} from '../../services';
 
 @Component({
   selector: 'app-doghotel',
@@ -8,9 +7,11 @@ import {DogGalleryService, DogHotelService} from '../../services';
   styleUrls: ['./doghotel.component.scss']
 })
 export class DoghotelComponent implements OnInit {
-  public offline: boolean;
+  private offline: boolean;
   private port: string;
-  constructor(private doghotelService: DogHotelService) { }
+
+  constructor(private doghotelService: DogHotelService) {
+  }
 
   ngOnInit() {
     this.getDogs();

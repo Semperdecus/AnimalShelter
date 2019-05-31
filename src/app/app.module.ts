@@ -8,13 +8,14 @@ import {DashboardComponent} from './pages/dashboard/dashboard.component';
 import {SidebarModule} from 'ng-sidebar';
 import {MatIconModule} from '@angular/material/icon';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AuthService, DogGalleryService, DogHotelService} from './services';
-import {HttpClientModule} from '@angular/common/http';
+import {AuthService, CatService, DogGalleryService, DogHotelService} from './services';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {LoginComponent} from './pages/login/login.component';
 import {DogsComponent} from './pages/dogs/dogs.component';
 import {DogComponent} from './components/dog/dog.component';
-import { DoghotelComponent } from './pages/doghotel/doghotel.component';
-import { CatsComponent } from './pages/cats/cats.component';
+import {DoghotelComponent} from './pages/doghotel/doghotel.component';
+import {CatsComponent} from './pages/cats/cats.component';
+import {AuthInterceptor} from './guards/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -38,9 +39,11 @@ import { CatsComponent } from './pages/cats/cats.component';
     ReactiveFormsModule,
   ],
   providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     AuthService,
     DogGalleryService,
     DogHotelService,
+    CatService,
   ],
   bootstrap: [AppComponent]
 })
