@@ -14,7 +14,7 @@ import java.util.List;
 public class DogGallery {
 
     private int id;
-    private List<Object> images;
+    private List<Object> dogs;
 
     public DogGallery() {
     }    
@@ -22,7 +22,7 @@ public class DogGallery {
     public DogGallery(int galleryId) {
         this.id = galleryId;
     }
-
+    
     public int getId() {
         return id;
     }
@@ -31,11 +31,11 @@ public class DogGallery {
         this.id = id;
     }
 
-    public List<Object> getImages() {
-        return images;
+    public List<Object> getDogs() {
+        return dogs;
     }
 
-    public void setImages(List<Object> images) {
-        this.images = images;
+    public void setDogs(List<Object> dogs) {
+        this.dogs = dogs;
     }
 }

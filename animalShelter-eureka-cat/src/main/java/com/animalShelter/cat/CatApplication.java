@@ -1,17 +1,15 @@
-package com.animalShelter.eureka.zuul;
+package com.animalShelter.cat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableZuulProxy	// Enable Zuul
-public class ZuulApplication {
+public class CatApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ZuulApplication.class, args);
-        
+        SpringApplication.run(CatApplication.class, args);
     }
+
 }

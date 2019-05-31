@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableCircuitBreaker
+@EnableCircuitBreaker // Check for @HystrixCommand annotation
 public class DogGalleryApplication {
 
     public static void main(String[] args) {
@@ -22,9 +22,8 @@ public class DogGalleryApplication {
 
 @Configuration
 class RestTemplateConfig {
-    // Create a bean for restTemplate to call services
     @Bean
-    @LoadBalanced		// Load balance between service instances running at different ports.
+    @LoadBalanced // Load balance between service instances running at different ports.
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
