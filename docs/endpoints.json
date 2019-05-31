@@ -1,0 +1,188 @@
+{
+	"id": "36eec26d-c109-475f-9944-69d1a8fce0f5",
+	"name": "Microservice-AnimalShelter",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": null,
+	"order": [
+		"d0cddfd2-6da1-4be9-a9b4-43aa61c1c419",
+		"e0f5e025-565a-49f9-8ad4-27ad730eacc5",
+		"53907218-16cb-4a28-b5e4-53356b30f998",
+		"e2863456-c940-4ba8-b28d-407242f6cbc9",
+		"05eb07b9-bc73-4b67-a3e7-80e6eca970ba",
+		"a683e5da-076c-42d4-ac54-1d808e238890",
+		"ad23631c-2348-4b3b-b096-f67cd6721bb0"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "05eb07b9-bc73-4b67-a3e7-80e6eca970ba",
+			"name": "GET-doghotel",
+			"url": "http://localhost:8762/doghotel",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXJyeSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE1NTg4MTE2NDgsImV4cCI6MTU1ODg5ODA0OH0.9jfvhcZ8KWXe5EfalE83xujsqGH6yEcaWUesuB7PEgAibhRf5Gwv6LvVv7WMb8V9pkP9BT_0DRgbjkmHWkXvKQ"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "53907218-16cb-4a28-b5e4-53356b30f998",
+			"name": "GET-dogGallery",
+			"url": "http://localhost:8762/dogGallery",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXJyeSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE1NTg4MTE2NDgsImV4cCI6MTU1ODg5ODA0OH0.9jfvhcZ8KWXe5EfalE83xujsqGH6yEcaWUesuB7PEgAibhRf5Gwv6LvVv7WMb8V9pkP9BT_0DRgbjkmHWkXvKQ"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a683e5da-076c-42d4-ac54-1d808e238890",
+			"name": "GET-randomCat",
+			"url": "http://localhost:8762/cat/randomCat",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "ad23631c-2348-4b3b-b096-f67cd6721bb0",
+			"name": "GET-toggleRandomCat",
+			"url": "http://localhost:8762/cat/admin/toggleRandomCat",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d0cddfd2-6da1-4be9-a9b4-43aa61c1c419",
+			"name": "POST-auth-forBearerToken",
+			"url": "localhost:8762/auth",
+			"description": "",
+			"data": [],
+			"dataMode": "raw",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIzIiwiaWF0IjoxNTU4NTE2MTQ1LCJzdWIiOiJ3cWVAdGVyLmNvbSIsImlzcyI6IlRlYW1UZXJyeVJlZ2lzdHJhdGlvblN5c3RlbSIsImV4cCI6MTU1ODUxNjk0NX0.1FG8LJMzhWFnmkIACyAUnA_b7vhqHH1_zJ-MA7cEjVPxiDhEjC_NDcIFSRMpwMIUiShMbTqMgzhA_Mb2w8cGgg",
+						"type": "string"
+					}
+				]
+			},
+			"events": [],
+			"folder": null,
+			"rawModeData": "{\n\t\"username\": \"terry\",\n\t\"password\": \"12345\"\n}",
+			"headers": "Content-Type: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "e0f5e025-565a-49f9-8ad4-27ad730eacc5",
+			"name": "GET-dogGallery-admin",
+			"url": "http://localhost:8762/dogGallery/admin",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXJyeSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE1NTg4MTE2NDgsImV4cCI6MTU1ODg5ODA0OH0.9jfvhcZ8KWXe5EfalE83xujsqGH6yEcaWUesuB7PEgAibhRf5Gwv6LvVv7WMb8V9pkP9BT_0DRgbjkmHWkXvKQ"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "e2863456-c940-4ba8-b28d-407242f6cbc9",
+			"name": "GET-dogGallery-1",
+			"url": "http://localhost:8762/dogGallery/1",
+			"description": "",
+			"data": null,
+			"dataMode": "params",
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXJyeSIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE1NTg4MTE2NDgsImV4cCI6MTU1ODg5ODA0OH0.9jfvhcZ8KWXe5EfalE83xujsqGH6yEcaWUesuB7PEgAibhRf5Gwv6LvVv7WMb8V9pkP9BT_0DRgbjkmHWkXvKQ"
+					}
+				],
+				"type": "bearer"
+			},
+			"events": [],
+			"folder": null,
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
