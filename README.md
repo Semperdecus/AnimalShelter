@@ -1,5 +1,6 @@
 # AnimalShelter
-Microservice application for school
+Microservice application for school.
+Demo: https://www.youtube.com/watch?v=IZdji9pTjm8
 
 ## Used tools
 -	Netflix Eureka: discovery server
